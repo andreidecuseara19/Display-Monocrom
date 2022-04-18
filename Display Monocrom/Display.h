@@ -16,18 +16,15 @@ public:
 	Display(void);
 	~Display(void);
 
-
-
 	void citire(ifstream&);
-
     int dimensiune();
     void afisare();
     void pixel(int, int, int);
+
     Display operator + (Display);
     Display operator - ();
     Display operator ~ ();
-    Display scalare(Display);
-
+    Display operator * (int);
 
 };
 

@@ -63,6 +63,13 @@ void Display::citire(ifstream& stream)
 	dimy = j;
 }
 
+//Functia de afisare a dimensiunii unei imagini
+int Display::dimensiune()
+{
+	cout << dimx << ' ' << dimy << endl << endl;
+	return (dimx * dimy);
+}
+
 //Functia de afisare a unei imagini
 void Display::afisare()
 {
@@ -130,9 +137,34 @@ Display Display::operator~()
 	return Display();
 }
 
-//Functia de afisare a dimensiunii unei imagini
-int Display::dimensiune()
+//Functia de scalare a unei imagini
+Display Display::operator*(int mult)
 {
-	cout << dimx << ' ' << dimy << endl << endl;
-	return (dimx * dimy);
+	
+	Display backup;
+	backup.dimx = this->dimx;
+	backup.dimy = this->dimy;
+
+	for (int i = 0; i < dimx; i++)
+	{
+		for (int j = 0; j < dimy; j++)
+		{
+			backup.matrice[i][j] = this->matrice[i][j];
+		}
+	}
+
+	dimx = dimx * mult;
+	dimy = dimy * mult;
+	int icount, jcount;
+
+	for (int i = 0; i < dimx; i++)
+	{
+		for (int j = 0; j < dimy; j++)
+		{
+			icount = div(i, mult).quot;
+			jcount = div(j, mult).quot;
+			matrice[i][j] = backup.matrice[icount][jcount];
+		}
+	}
+	return Display();
 }

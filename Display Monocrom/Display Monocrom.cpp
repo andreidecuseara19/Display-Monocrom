@@ -31,6 +31,9 @@ int main()
     
     -m1;
     m1.afisare();
+
+    m1 * 2;
+    m1.afisare();
     
     ~m1;
     m1.afisare();
