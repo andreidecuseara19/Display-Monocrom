@@ -5,7 +5,6 @@
 using namespace std;
 #define MAX 50
 
-
 int main()
 {
     ifstream matricetext;
@@ -27,19 +26,14 @@ int main()
     m1.afisare();
     m2.afisare();
 
-//    m1 + m2;
-//    m1.afisare();
-//    m2.afisare();
-
-    /*
+    m1 + m2;
+    m1.afisare();
+    
     -m1;
     m1.afisare();
-    */
-
-    /*
+    
     ~m1;
     m1.afisare();
-    */
 
     matricetext.close();
     matricetext2.close();

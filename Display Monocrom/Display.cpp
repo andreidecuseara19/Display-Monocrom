@@ -88,17 +88,16 @@ void Display::pixel(int i, int j, int valoare)
 //Functia de compunere a doua imagini
 Display Display::operator+(Display b)
 {
-	Display res;
-	for (int i = 0; i < res.dimx; i++)
+	for (int i = 0; i < dimx; i++)
 	{
-		for (int j = 0; j < res.dimy; j++)
+		for (int j = 0; j < dimy; j++)
 		{
-			res.matrice[i][j] += b.matrice[i][j];
-			if (res.matrice[i][j] > 1)
-				res.matrice[i][j] = 1;
+			matrice[i][j] += b.matrice[i][j];
+			if (matrice[i][j] > 1)
+				matrice[i][j] = 1;
 		}
 	}
-	return res;
+	return Display();
 }
 
 //Functia de inversare a imaginii
