@@ -24,7 +24,7 @@ Display::Display(void)
 
 }
 
-
+//Destructor
 Display::~Display(void)
 {
 }
