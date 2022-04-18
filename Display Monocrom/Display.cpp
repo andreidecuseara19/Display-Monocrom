@@ -80,6 +80,7 @@ void Display::afisare()
 	cout << endl;
 }
 
+//Functia de editare a unui pixel
 void Display::pixel(int i, int j, int valoare)
 {
 	this->matrice[i][j] = valoare;
