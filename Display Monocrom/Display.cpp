@@ -108,6 +108,21 @@ Display Display::operator+(Display b)
 	return Display();
 }
 
+//Functia de scadere a doua imagini
+Display Display::operator-(Display b)
+{
+	for (int i = 0; i < dimx; i++)
+	{
+		for (int j = 0; j < dimy; j++)
+		{
+			matrice[i][j] -= b.matrice[i][j];
+			if (matrice[i][j] < 0)
+				matrice[i][j] = 0;
+		}
+	}
+	return Display();
+}
+
 //Functia de inversare a imaginii
 Display Display::operator-()
 {

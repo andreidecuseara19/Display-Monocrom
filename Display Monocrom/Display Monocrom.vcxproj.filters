@@ -34,5 +34,8 @@
     <Text Include="matricetext2.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="matricetext3.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

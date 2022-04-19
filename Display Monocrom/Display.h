@@ -22,6 +22,7 @@ public:
     void pixel(int, int, int);
 
     Display operator + (Display);
+    Display operator - (Display);
     Display operator - ();
     Display operator ~ ();
     Display operator * (int);

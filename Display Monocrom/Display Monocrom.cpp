@@ -10,13 +10,17 @@ int main()
 {
     ifstream matricetext;
     ifstream matricetext2;
+    ifstream matricetext3;
     matricetext.open("matricetext.txt");
     matricetext2.open("matricetext2.txt");
+    matricetext3.open("matricetext3.txt");
 
     Display m1;
     Display m2;
+    Display m3;
     m1.citire(matricetext);
     m2.citire(matricetext2);
+    m3.citire(matricetext3);
 
     m1.dimensiune();
 
@@ -34,6 +38,9 @@ int main()
     m1.afisare();
 
     m1 * 2;
+    m1.afisare();
+
+    m1 - m3;
     m1.afisare();
 
     m1 * 0.5;
