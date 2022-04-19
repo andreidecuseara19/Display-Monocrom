@@ -25,6 +25,7 @@ public:
     Display operator - ();
     Display operator ~ ();
     Display operator * (int);
+    Display operator * (double);
 
 };
 

@@ -137,7 +137,7 @@ Display Display::operator~()
 	return Display();
 }
 
-//Functia de scalare a unei imagini
+//Functia de scalare a unei imagini folosind un int ca multiplicator
 Display Display::operator*(int mult)
 {
 	
@@ -163,6 +163,38 @@ Display Display::operator*(int mult)
 		{
 			icount = div(i, mult).quot;
 			jcount = div(j, mult).quot;
+			matrice[i][j] = backup.matrice[icount][jcount];
+		}
+	}
+	return Display();
+}
+
+//Functia de scalare a unei imagini folosind un double ca multiplicator
+Display Display::operator*(double mult)
+{
+
+	Display backup;
+	backup.dimx = this->dimx;
+	backup.dimy = this->dimy;
+
+	for (int i = 0; i < dimx; i++)
+	{
+		for (int j = 0; j < dimy; j++)
+		{
+			backup.matrice[i][j] = this->matrice[i][j];
+		}
+	}
+
+	dimx = (int)((double)dimx * mult);
+	dimy = (int)((double)dimy * mult);
+	int icount, jcount;
+
+	for (int i = 0; i < dimx; i++)
+	{
+		for (int j = 0; j < dimy; j++)
+		{
+			icount = (int)((double)i / mult);
+			jcount = (int)((double)j / mult);
 			matrice[i][j] = backup.matrice[icount][jcount];
 		}
 	}
