@@ -3,7 +3,7 @@ using namespace std;
 
 #pragma once
 
-#define MAX 50
+#define MAX 100
 
 
 class Display

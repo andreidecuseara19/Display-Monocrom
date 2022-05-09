@@ -3,7 +3,7 @@
 #include "Display.h"
 
 using namespace std;
-#define MAX 50
+#define MAX 100
 
 void displaymenu()
 {
@@ -37,6 +37,7 @@ int main()
     m1.citire(matricetext);
     m2.citire(matricetext2);
     m3.citire(matricetext3);
+
 
     displaymenu();
     int yourchoice;
