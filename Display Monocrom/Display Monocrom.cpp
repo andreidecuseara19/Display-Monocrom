@@ -24,9 +24,7 @@ int main()
 
     m1.dimensiune();
 
-    /*
-    m1.pixel(0, 0, 1);
-    */
+    m1.pixel(0, 0, 0);
 
     m1.afisare();
     m2.afisare();

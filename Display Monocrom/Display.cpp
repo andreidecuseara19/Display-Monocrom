@@ -13,7 +13,7 @@ Display::Display(void)
 	dimx=0;
 	dimy=0;
 
-	cout << "|-|" << endl << endl;
+//	cout << "|-|" << endl << endl;
 	for (int i = 0; i < MAX; i++)
 	{
 		for (int j = 0; j < MAX; j++)
@@ -66,7 +66,7 @@ void Display::citire(ifstream& stream)
 //Functia de afisare a dimensiunii unei imagini
 int Display::dimensiune()
 {
-	cout << dimx << ' ' << dimy << endl << endl;
+	cout << "\nDimensiunea primei matrici este: " << dimx << 'x' << dimy << endl << endl;
 	return (dimx * dimy);
 }
 
