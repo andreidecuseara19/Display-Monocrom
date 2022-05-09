@@ -66,7 +66,7 @@ void Display::citire(ifstream& stream)
 //Functia de afisare a dimensiunii unei imagini
 int Display::dimensiune()
 {
-	cout << "\nDimensiunea primei matrici este: " << dimx << 'x' << dimy << endl << endl;
+	cout << "\nThe dimensions of the matrix are: " << dimx << 'x' << dimy << endl;
 	return (dimx * dimy);
 }
 
