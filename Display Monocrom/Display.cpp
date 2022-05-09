@@ -13,7 +13,7 @@ Display::Display(void)
 	dimx=0;
 	dimy=0;
 
-	cout << "Constructorul a fost apelat" << endl << endl;
+	cout << "|-|" << endl << endl;
 	for (int i = 0; i < MAX; i++)
 	{
 		for (int j = 0; j < MAX; j++)
@@ -78,9 +78,9 @@ void Display::afisare()
 		for (int j = 0; j < dimy; j++)
 		{
 			if (this->matrice[i][j] == 0)
-				cout << '0';
+				cout << "0 ";
 			else
-				cout << '1';
+				cout << "1 ";
 		}
 		cout << endl;
 	}
