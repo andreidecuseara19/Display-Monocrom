@@ -106,6 +106,8 @@ int main()
             cout << "Should the pixel be on?\n";
             cin >> valpix;
             m1.pixel(xpix, ypix, valpix);
+            cout << "Here is your masterpiece:\n";
+            m1.afisare();
             break;
         }
         case 9:
