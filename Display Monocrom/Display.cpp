@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include "Display.h"
 
@@ -78,9 +78,9 @@ void Display::afisare()
 		for (int j = 0; j < dimy; j++)
 		{
 			if (this->matrice[i][j] == 0)
-				cout << "0 ";
+				cout << ". ";
 			else
-				cout << "1 ";
+				cout << "0 ";
 		}
 		cout << endl;
 	}
