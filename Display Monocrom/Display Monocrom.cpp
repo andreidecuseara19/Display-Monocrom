@@ -10,13 +10,13 @@ void displaymenu()
     cout << " ===================================================== \n";
     cout << " \t\tMONOCHROME DISPLAY MENU \t \n ";
     cout << "===================================================== \n";
-    cout << " 1.Print out the first matrix\n";
-    cout << " 2.Print out the second matrix\n";
-    cout << " 3.Adding the first two matrices\n";
-    cout << " 4.Inverting the first matrix\n";
+    cout << " 1.Print out the first image:\n";
+    cout << " 2.Print out the second image:\n";
+    cout << " 3.Adding the first two images:\n";
+    cout << " 4.Inverting the first image:\n";
     cout << " 5.Scaling up by a factor of 2:\n";
     cout << " 6.Scaling down by 0.5:\n";
-    cout << " 7.Deleting the first matrix:\n";
+    cout << " 7.Deleting the first image:\n";
     cout << " 8.Draw by pixels:\n";
     cout << "\n 9.Exit the program \n";
     cout << " ===================================================== \n";
@@ -24,17 +24,17 @@ void displaymenu()
 
 int main()
 {
-    ifstream matricetext;
+    ifstream matricetext1;
     ifstream matricetext2;
     ifstream matricetext3;
-    matricetext.open("matricetext.txt");
+    matricetext1.open("matricetext.txt");
     matricetext2.open("matricetext2.txt");
     matricetext3.open("matricetext3.txt");
 
     Display m1;
     Display m2;
     Display m3;
-    m1.citire(matricetext);
+    m1.citire(matricetext1);
     m2.citire(matricetext2);
     m3.citire(matricetext3);
 
@@ -126,40 +126,9 @@ int main()
             return 0;
     } while (true);
 
-    
-/*
-    m1.pixel(0, 0, 0);
-
-    m1.afisare();
-    m2.afisare();
-
-    cout << "M1 added with M2:\n" << endl;
-    m1 + m2;
-    m1.afisare();
-    
-    cout << "M1 inverted:\n" << endl;
-    -m1;
-    m1.afisare();
-
-    cout << "M1 scaled up by a factor of 2:\n" << endl;
-    m1 * 2;
-    m1.afisare();
-
-    cout << "M1 minus M3:\n" << endl;
-    m1 - m3;
-    m1.afisare();
-
-    cout << "M1 scaled down by a factor of 0.5:\n" << endl;
-    m1 * 0.5;
-    m1.afisare();
-
-    cout << "M1 deleted:\n" << endl;
-    ~m1;
-    m1.afisare();
-*/
-
-    matricetext.close();
+    matricetext1.close();
     matricetext2.close();
+    matricetext3.close();
 
     return 0;
 }
