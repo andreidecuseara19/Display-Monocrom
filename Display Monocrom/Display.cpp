@@ -2,9 +2,6 @@
 #include <fstream>
 #include "Display.h"
 
-
-//#define MAX 50
-
 using namespace std;
 
 //Constructor

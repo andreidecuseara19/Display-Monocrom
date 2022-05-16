@@ -5,7 +5,6 @@ using namespace std;
 
 #define MAX 100
 
-
 class Display
 {
 public:

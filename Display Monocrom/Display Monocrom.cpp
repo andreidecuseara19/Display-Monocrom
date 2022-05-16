@@ -17,7 +17,7 @@ void displaymenu()
     cout << " 5.Scaling up by a factor of 2:\n";
     cout << " 6.Scaling down by 0.5:\n";
     cout << " 7.Deleting the first image:\n";
-    cout << " 8.Draw by pixels:\n";
+    cout << " 8.Draw with pixels:\n";
     cout << "\n 9.Exit the program \n";
     cout << " ===================================================== \n";
 }
