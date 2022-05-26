@@ -11,7 +11,7 @@ using namespace std;
 
 void password()
 {
-    char password[20], my_password[20] = "abcd";
+    char password[20], my_password[20] = "display";
     int i;
     char ch;
     system("cls");
