@@ -9,8 +9,6 @@ Display::Display(void)
 {
 	dimx=0;
 	dimy=0;
-
-//	cout << "|-|" << endl << endl;
 	for (int i = 0; i < MAX; i++)
 	{
 		for (int j = 0; j < MAX; j++)
