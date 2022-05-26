@@ -1,9 +1,42 @@
 #include <iostream>
 #include <fstream>
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "Display.h"
 
 using namespace std;
 #define MAX 100
+
+void password()
+{
+    char password[20], my_password[20] = "abcd";
+    int i;
+    char ch;
+    system("cls");
+    printf("PASSWORD: ");
+    i = 0;
+    do
+    {
+        ch = _getch();
+        password[i] = ch;
+        if (ch != 27 && ch != 13)
+            _putch('*');
+        else
+            break;
+        i++;
+    } while (i < 19);
+    password[i] = '\0';
+    //if you want that password don't be case-sensitive
+    //strupr(password);
+    if (strcmp(password, my_password) != 0) // verify password
+    {
+        printf("\n\nIncorrect password !!!");
+        return; // if the password is incorrect it will exit the program
+    }
+    printf("\n\nThe password is correct so the program is executed ! \n");
+}
 
 void displaymenu()
 {
@@ -38,7 +71,7 @@ int main()
     m2.citire(matricetext2);
     m3.citire(matricetext3);
 
-
+    password();
     displaymenu();
     int yourchoice;
     do
